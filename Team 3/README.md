@@ -7,6 +7,8 @@
 Ein **automatisiertes System zur intelligenten Beantwortung von Glassdoor-Bewertungen**, entwickelt für **atolls**, basierend auf **n8n**, **React** und **Next.js**.
 
 ---
+<hr style="border: none; border-top: 1px solid #eaeaea;" />
+
 
 ## Projektübersicht
 
@@ -33,7 +35,7 @@ Das System kombiniert **Workflow-Automatisierung (n8n)** mit einer **modernen We
 
 Das System arbeitet vollständig automatisiert:
 
-1. **Neue Glassdoor-Bewertung wird erkannt**
+1. Neue Glassdoor-Bewertung wird erkannt
 2. Bewertung wird analysiert (Sentiment, Ton, Inhalt)
 3. Eine passende Antwort wird generiert
 4. Antwort kann automatisch oder manuell freigegeben werden
