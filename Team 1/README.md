@@ -23,7 +23,7 @@
     - [2.1 Problem Statement](#21-problem-statement)
     - [2.2 Solution](#22-solution)
         - [2.2.1 Links](#221-links)
-        - [2.2.2 Tech Stack](#222-tech-stack)
+        - [2.2.2 Tech Stack and Tools](#222-tech-stack)
         - [2.2.3 Workflow](#223-workflow)
     - [2.3 How to run the prototype](#22-solution)
 
@@ -82,9 +82,9 @@ On top each page features a direct comparison with Celonis based on some of this
 
 ### 2.1 PROBLEM STATEMENT:
 
-##### WE NEED:
-- "... an internal knowledge base in form of an AI Chatbot"
-- "... a Dashboard with an Chatbot based on their intranet including a preview function and the possibility to download the PDF, if needed”
+**We need:**  
+An **internal knowledge base** in form of an AI Chatbot.
+A Dashboard with an Chatbot based on their intranet including a **preview function** and the possibility to download the PDF, if needed”
 
 
 ### 2.2 SOLUTION:
@@ -92,9 +92,27 @@ On top each page features a direct comparison with Celonis based on some of this
 #### 2.2.1 LINKS:
 - Figma Board: https://www.figma.com/design/5MFaq1eNdoij6Lr4tt3e1F/SITECO--AI-Agent?node-id=0-1&t=9dou3EDlqXHEj8LB-1
   
-#### 2.2.2 TECH STACK:
+#### 2.2.2 TECH STACK AND TOOLS:
 
-#### 2.2.3 WORKFLOW:
+We used several technologies for different purposes:
+- **Figma:** Collaboration tool to share insights within the team and with the client
+- **n8n:** Backend logic to host Supabase, the Chatbot and the preview-function
+- **Supabase (Database):** Central storage for **vector data** and **relational data**
+- **OpenAI:** LLM for extraction, summarization, and reasoning.
+
+#### 2.2.3 WORKFLOW FOR USERS:
+
+Right now, the user opens the Dashboard. On it the users can see a menubar on the left and a chatbot.
+On the Menubar users can select between different links (weblinks of the SITECO-Website) and the **chatbot**.
+
+If the user asks the chatbot a question - first a little (loading-)animation is displayed – so that 
+the users know, that the LLM is working.
+
+After a short time, the chatbot generates an answer, and provides a preview opportnity.
+Users can see, which parts of the knowledge base is used for the answer.
+Additionally, users can download the PDF used for the answer.
+
+
 
 ### 2.3 How to run the prototype
 **Diaclaimer:**
@@ -108,3 +126,4 @@ To test the chatbot, please follow the steps below.
 - to run the frontend start it with "npm run dev"
 - Additionally, the webhooks "database update" and "FAQ summary mail" can be triggered using the file "control-panel-small.html", so the automations do not have to be executed directly in n8n
   
+
